@@ -51,14 +51,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="{% url 'homepage' %}" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           {% if user.is_authenticated %}
-            <li><a href="">Logout</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}
-            <li><a href="">SignUp</a></li>
-            <li><a href="">LogIn</a></li>
+            <li><a href="{% url 'signup' %}">SignUp</a></li>
+            <li><a href="{% url 'login' %}">LogIn</a></li>
           {% endif %}
           
           <li><a href ="team.html">Team</a></li>

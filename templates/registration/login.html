@@ -3,12 +3,19 @@
 
 
 {% block content %}
+<br>
+<br>
+<br>
 <div class="container">
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form | crispy }}
+    <div class="col-6">
         <h1>Login Form</h1>
-        <button type="submit" class="btn btn-success">LogIn</button>
-    </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form | crispy }}
+            
+            <br>
+            <button type="submit" class="btn btn-success">LogIn</button>
+        </form>
+    </div>
 </div>
 {% endblock content %}
